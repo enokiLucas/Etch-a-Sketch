@@ -1,3 +1,9 @@
-div {
-	border: blue;
+.grid-container {
+	display: grid;
+	grid-template-columns: repeat(16, 1fr);
+}
+
+div .grid-items {
+	background-color: blue;
+	border: red solid 2px;
 }
