@@ -26,3 +26,10 @@ gridItem.forEach((item) => {
 		item.style.backgroundColor = 'gray';
 	})
 })
+
+
+const buttonNewGrid = document.querySelector('.button-newGrid');
+const newGrid = buttonNewGrid.addEventListener('click', () => {
+	const numberOfSquares = Number(window.prompt('How many squares do you each side should have?', ''));
+	return numberOfSquares;
+})
