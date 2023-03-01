@@ -27,9 +27,14 @@ gridItem.forEach((item) => {
 	})
 })
 
+let numberOfSquares = 16;
 
 const buttonNewGrid = document.querySelector('.button-newGrid');
-const newGrid = buttonNewGrid.addEventListener('click', () => {
+const newGrid = buttonNewGrid.addEventListener('click', getNumberOfSquares = () => {
 	const numberOfSquares = Number(window.prompt('How many squares do you each side should have?', ''));
-	return numberOfSquares;
+
+	console.log(numberOfSquares);
 })
+
+
+
