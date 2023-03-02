@@ -27,3 +27,10 @@ gridItem.forEach((item) => {
 	})
 })
 
+//Button 'New Grid' opens the dialog
+const buttonNewGrid = document.querySelector('.button-new-grid');
+const dialogNewGrid = document.querySelector('#size-of-grid');
+
+buttonNewGrid.addEventListener("click", () => {
+	dialogNewGrid.showModal();
+})
