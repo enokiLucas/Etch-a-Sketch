@@ -34,3 +34,20 @@ const dialogNewGrid = document.querySelector('#size-of-grid');
 buttonNewGrid.addEventListener("click", () => {
 	dialogNewGrid.showModal();
 })
+
+const buttonOK = document.querySelector('#button-ok');
+buttonOK.addEventListener('click', () => {
+
+	//Get the height and length from the dialog.
+	const newHeight = document.getElementById('height').value;
+	const newLength = document.getElementById('length').value;
+	//Convert the string into number.
+	newHeight = parseInt(newHeight);
+	newLength = parseInt(newLength);
+
+	console.log('height:' + newHeight);
+	console.log('length:' + newLength);
+
+	const newArray = [newHeight, newLength];
+	return newArray;
+})
