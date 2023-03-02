@@ -7,6 +7,18 @@
 	</head>
 	<body>
 		<button class='button-newGrid'>New Grid</button>
+
+		<dialog open id="size-of-grid">
+			<form method="dialog">
+				<label for="height">Number of squares in the vertical side (1 to 100)</label>
+				<input type="number" id="height" max="100" min="1">
+				<label for="lenght">Number of squares in the horizontal side (1 to 100)</label>
+				<input type="number" id="lenght" max="100" min="1">
+				<button>OK</button>	
+			</form>
+			
+		</dialog>
+
 		<div class ="grid-container"></div>
 
 		<script src="script.js"></script>
