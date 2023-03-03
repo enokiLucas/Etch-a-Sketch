@@ -51,3 +51,6 @@ buttonOK.addEventListener('click', () => {
 	const newArray = [newHeight, newLength];
 	return newArray;
 })
+
+const gridContainer = document.querySelector('.grid-container');
+gridContainer.style.gridTemplateColumns = 'repeat(16, 1fr)';
