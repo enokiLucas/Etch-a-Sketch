@@ -36,7 +36,7 @@ buttonNewGrid.addEventListener("click", () => {
 })
 
 const buttonOK = document.querySelector('#button-ok');
-buttonOK.addEventListener('click', () => {
+buttonOK.addEventListener('click', btnOk = () => {
 
 	//Get the height and length from the dialog.
 	const newHeight = document.getElementById('height').value;
@@ -51,6 +51,20 @@ buttonOK.addEventListener('click', () => {
 	const newArray = [newHeight, newLength];
 	return newArray;
 })
+
+const getNewHeight = () => {
+	const array = [];
+	array = btnOk;
+	let heightA = array[0];
+	return heightA;
+}
+
+const getNewLength = () => {
+	const array = [];
+	array = btnOk;
+	const lengthA = array[1];
+	return lengthA;
+}
 
 const gridContainer = document.querySelector('.grid-container');
 gridContainer.style.gridTemplateColumns = 'repeat(16, 1fr)';
