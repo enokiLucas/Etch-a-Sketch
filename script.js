@@ -39,31 +39,30 @@ const buttonOK = document.querySelector('#button-ok');
 buttonOK.addEventListener('click', btnOk = () => {
 
 	//Get the height and length from the dialog.
-	const newHeight = document.getElementById('height').value;
-	const newLength = document.getElementById('length').value;
+	let newHeight = document.getElementById('height').value;
+	let newLength = document.getElementById('length').value;
 	//Convert the string into number.
 	newHeight = parseInt(newHeight);
 	newLength = parseInt(newLength);
-
-	console.log('height:' + newHeight);
-	console.log('length:' + newLength);
 
 	const newArray = [newHeight, newLength];
 	return newArray;
 })
 
+let heightA;
+let lengthA;
+
+//setter functions
 const getNewHeight = () => {
-	const array = [];
-	array = btnOk;
-	let heightA = array[0];
-	return heightA;
+	let array = [];
+	array = btnOk();
+	heightA = array[0];
 }
 
 const getNewLength = () => {
-	const array = [];
-	array = btnOk;
-	const lengthA = array[1];
-	return lengthA;
+	let array = [];
+	array = btnOk();
+	lengthA = array[1];
 }
 
 const gridContainer = document.querySelector('.grid-container');
