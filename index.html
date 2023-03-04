@@ -6,22 +6,30 @@
 		<link rel="stylesheet" href="styles.css">
 	</head>
 	<body>
-		<button class='button-new-grid'>New Grid</button>
 
-		<dialog id="size-of-grid">
-			<form method="dialog">
-				<label for="height">Number of squares in the vertical side (1 to 100)</label>
-				<input type="number" id="height" max="100" min="1">
+		<div id="header">
+			<div class="title">Etch & Sketch</div>
+		</div>
 
-				<label for="length">Number of squares in the horizontal side (1 to 100)</label>
-				<input type="number" id="length" max="100" min="1">
+		<div id="content">
+			<button class='button-new-grid'>New Grid</button>
 
-				<button id="button-ok">OK</button>	
-			</form>
-			
-		</dialog>
+			<dialog id="size-of-grid">
+				<form method="dialog">
+					<label for="height">Number of squares in the vertical side (1 to 100)</label>
+					<input type="number" id="height" max="100" min="1">
 
-		<div class ="grid-container"></div>
+					<label for="length">Number of squares in the horizontal side (1 to 100)</label>
+					<input type="number" id="length" max="100" min="1">
+
+					<button id="button-ok">OK</button>	
+				</form>
+				
+			</dialog>
+		
+			<div class ="grid-container"></div>
+		</div>
+
 
 		<script src="script.js"></script>
 	</body>

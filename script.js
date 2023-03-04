@@ -10,8 +10,8 @@ const makeDiv = () => {
 }
 
 //call makeDiv() 16x16 times. And give it the class 'grid-item'
-for(let i = 0; i<5; i++) {
-	for(let j = 0; j<5; j++) {
+for(let i = 0; i<55; i++) {
+	for(let j = 0; j<55; j++) {
 		makeDiv();
 	}
 }
