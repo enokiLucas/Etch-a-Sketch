@@ -11,8 +11,8 @@ const makeDiv = (text, className) => {
 }
 
 //call makeDiv() 16x16 times. And give it the class 'grid-item'
-for(let i = 0; i<16; i++) {
-	for(let j = 0; j<16; j++) {
+for(let i = 0; i<5; i++) {
+	for(let j = 0; j<5; j++) {
 		makeDiv((i+1) +'x'+ (j+1), 'grid-item');
 	}
 }
