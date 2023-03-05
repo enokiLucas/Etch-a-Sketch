@@ -1,6 +1,3 @@
-//make a grid of 16x16 div
-//Add a red border to the grid and blue border to each div
-
 //make one div and give it a class
 const makeDiv = () => {
 	const div = document.createElement('div');
@@ -9,12 +6,20 @@ const makeDiv = () => {
 	div.className = 'grid-item';
 }
 
-//call makeDiv() 16x16 times. And give it the class 'grid-item'
-for(let i = 0; i<55; i++) {
-	for(let j = 0; j<55; j++) {
-		makeDiv();
+//default length
+let Length = 16;
+
+//function makeGrid(param), calls makeDiv param^2 number of times.
+const makeGrid = (numberOfSquares) => {
+	for(let i = 0; i<numberOfSquares; i++) {
+		for(let j = 0; j<numberOfSquares; j++) {
+			makeDiv();
+		}
 	}
 }
+
+//Default makeGrid();
+makeGrid(Length);
 
 //Create an nodeList with all the .grid-item elements
 const gridItem = document.querySelectorAll('.grid-item');

@@ -13,8 +13,8 @@
 .grid-container {
 	display: grid;
 	border: black 2px solid;
-	width: 690px;
-	height: 690px;
+	width: 500px;
+	height: 500px;
 	align-self: center;
 }
 
