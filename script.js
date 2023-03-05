@@ -7,10 +7,18 @@ const makeDiv = () => {
 }
 
 //default length
-let Length = 16;
+let Length = 55;
 
-//function makeGrid(param), calls makeDiv param^2 number of times.
+//define gridContainer
+const gridContainer = document.querySelector('.grid-container');
+
+//function makeGrid(param)
+///set the number of columns the grid will have and
+///calls makeDiv param^2 number of times.
 const makeGrid = (numberOfSquares) => {
+	const x = 'repeat(' + numberOfSquares + ', 1fr)';
+	gridContainer.style.gridTemplateColumns = x;
+
 	for(let i = 0; i<numberOfSquares; i++) {
 		for(let j = 0; j<numberOfSquares; j++) {
 			makeDiv();
@@ -43,31 +51,8 @@ const buttonOK = document.querySelector('#button-ok');
 buttonOK.addEventListener('click', btnOk = () => {
 
 	//Get the height and length from the dialog.
-	let newHeight = document.getElementById('height').value;
 	let newLength = document.getElementById('length').value;
 	//Convert the string into number.
-	newHeight = parseInt(newHeight);
 	newLength = parseInt(newLength);
 
-	const newArray = [newHeight, newLength];
-	return newArray;
 })
-
-let heightA;
-let lengthA;
-
-//setter functions
-const getNewHeight = () => {
-	let array = [];
-	array = btnOk();
-	heightA = array[0];
-}
-
-const getNewLength = () => {
-	let array = [];
-	array = btnOk();
-	lengthA = array[1];
-}
-
-const gridContainer = document.querySelector('.grid-container');
-gridContainer.style.gridTemplateColumns = 'repeat(16, 1fr)';
