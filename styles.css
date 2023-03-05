@@ -1,9 +1,14 @@
+body {
+	margin: 0;
+}
+
 #header {
 	background-color: #1f2937;
 	color: white;
 	font-weight: bold;
 	justify-content: center;
 	display: flex;
+	padding: 10px;
 }
 
 #content {
