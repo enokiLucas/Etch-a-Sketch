@@ -1,7 +1,3 @@
-//Default grid 16x16
-const gridContainer = document.querySelector('.grid-container');
-gridContainer.style.gridTemplateColumns = 'repeat(16, 1fr)';
-
 //make one div and give it a class
 const makeDiv = () => {
 	const div = document.createElement('div');
@@ -10,26 +6,29 @@ const makeDiv = () => {
 	div.className = 'grid-item';
 }
 
-for(let i = 0; i<16; i++) {
-	for(let j = 0; j<16; j++) {
-		makeDiv();
-	}
-}
+//default length
+let Length = 55;
 
-//define the number of columns  the new grid will have
-const numberOfColumns = (lengthOfGrid) => {
-	let x = 'repeat(' + lengthOfGrid + ', 1fr)';
+//define gridContainer
+const gridContainer = document.querySelector('.grid-container');
+
+//function makeGrid(param)
+///set the number of columns the grid will have and
+///calls makeDiv param^2 number of times.
+const makeGrid = (numberOfSquares) => {
+	const x = 'repeat(' + numberOfSquares + ', 1fr)';
 	gridContainer.style.gridTemplateColumns = x;
-}
 
-//call makeDiv() 16x16 times. And give it the class 'grid-item'
-const makeAllDiv = (lengthOfGrid) => {
-	for(let i = 0; i<lengthOfGrid; i++) {
-		for(let j = 0; j<lengthOfGrid; j++) {
+	for(let i = 0; i<numberOfSquares; i++) {
+		for(let j = 0; j<numberOfSquares; j++) {
 			makeDiv();
 		}
 	}
 }
+
+//Default makeGrid();
+makeGrid(Length);
+
 //Create an nodeList with all the .grid-item elements
 const gridItem = document.querySelectorAll('.grid-item');
 
@@ -56,10 +55,4 @@ buttonOK.addEventListener('click', btnOk = () => {
 	//Convert the string into number.
 	newLength = parseInt(newLength);
 
-	numberOfColumns(newLength);
-	makeAllDiv(newLength);
 })
-
-
-//const gridContainer = document.querySelector('.grid-container');
-//gridContainer.style.gridTemplateColumns = 'repeat(16, 1fr)';
