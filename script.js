@@ -12,6 +12,8 @@ let Length = 55;
 //define gridContainer
 const gridContainer = document.querySelector('.grid-container');
 
+
+
 //function makeGrid(param)
 ///set the number of columns the grid will have and
 ///calls makeDiv param^2 number of times.
@@ -33,11 +35,15 @@ makeGrid(Length);
 const gridItem = document.querySelectorAll('.grid-item');
 
 //Change the background color of all .grid-items
-gridItem.forEach((item) => {
-	item.addEventListener('mouseenter', () => {
-		item.style.backgroundColor = 'gray';
+const changeColor = (gridItem) => {
+	gridItem.forEach((item) => {
+		item.addEventListener('mouseenter', () => {
+			item.style.backgroundColor = 'gray';
+		})
 	})
-})
+}
+
+changeColor(gridItem);
 
 //Button 'New Grid' opens the dialog
 const buttonNewGrid = document.querySelector('.button-new-grid');
@@ -47,12 +53,27 @@ buttonNewGrid.addEventListener("click", () => {
 	dialogNewGrid.showModal();
 })
 
+//Remove previous grid
+const removeOldGrid = () => {
+	gridItem.forEach((item) => {
+		item.remove();
+	})
+
+}
+
 const buttonOK = document.querySelector('#button-ok');
 buttonOK.addEventListener('click', btnOk = () => {
 
-	//Get the height and length from the dialog.
+	//Get the height and from the dialog.
 	let newLength = document.getElementById('length').value;
 	//Convert the string into number.
 	newLength = parseInt(newLength);
+	
+	removeOldGrid();
+	makeGrid(newLength);
+	const gridItem = document.querySelectorAll('.grid-item');
+	changeColor(gridItem);
 
+	console.log(gridContainer.childElementCount);
 })
+
