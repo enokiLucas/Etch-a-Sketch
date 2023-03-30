@@ -13,6 +13,8 @@ body {
 
 #content {
 	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
 }
 
 .grid-container {
